@@ -45,5 +45,5 @@ public class Candidate {
 	private List<Experience> experience;
 	@ElementCollection
 	@CollectionTable(name="candidate_project", joinColumns=@JoinColumn(name="candidate_id"))
-	private List<Project> project;
+	private List<Project> projects;
 }

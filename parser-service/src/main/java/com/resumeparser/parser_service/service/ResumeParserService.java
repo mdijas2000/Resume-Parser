@@ -50,8 +50,8 @@ public class ResumeParserService {
             // Actually call the method and set the total experience!
             dto.setTotalExperience(calculateTotalExperience(dto.getExperience()));
 
-            candidateClient.saveCandidate(dto);
-            return dto;
+            ParsedResumeDTO saveOrExistingDTO=candidateClient.saveCandidate(dto);
+            return saveOrExistingDTO;
         } catch (Exception e) {
             throw new RuntimeException("Failed to extract text from file", e);
         }

@@ -10,6 +10,6 @@ import com.resumeparser.parser_service.dto.ParsedResumeDTO;
 public interface CandidateClient {
 
     @PostMapping("/api/candidates")
-    void saveCandidate(@RequestBody ParsedResumeDTO candidateData);
+    ParsedResumeDTO saveCandidate(@RequestBody ParsedResumeDTO candidateData);
 
 }
